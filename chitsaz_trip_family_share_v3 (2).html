@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chitsaz Family Southwest Loop | Mar 21–26, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f3ee;
+  --card:#fffdf9;
+  --ink:#1f2430;
+  --muted:#6d6a67;
+  --line:#e8dfd5;
+  --rust:#c55a3a;
+  --gold:#d6a74f;
+  --sage:#758b6a;
+  --sky:#507da8;
+  --night:#1f2740;
+  --zion:#c94e32;
+  --bryce:#df7d36;
+  --fire:#d84a2b;
+  --glow:0 12px 28px rgba(30,36,48,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:linear-gradient(180deg,#fbf8f3 0%,#f7f3ee 100%);color:var(--ink);line-height:1.58}
+a{color:var(--sky);text-decoration:none} a:hover{text-decoration:underline}
+.hero{padding:54px 18px 36px;background:linear-gradient(135deg,#202946 0%,#40234f 28%,#b35137 68%,#d6a74f 100%);color:#fff;text-align:center}
+.hero h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(2rem,5vw,3.3rem);letter-spacing:-1px}
+.hero .sub{opacity:.88;margin-top:6px;font-size:clamp(.95rem,2vw,1.08rem)}
+.hero .badge{display:inline-block;margin-top:14px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.18);font-weight:700;font-size:.85rem}
+.route{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px}
+.route span{background:rgba(255,255,255,.12);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:700}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nt{flex:0 0 auto;padding:13px 15px;font-size:.75rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#8a8177;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap}
+.nt:hover{color:var(--ink)} .nt.active{color:var(--rust);border-bottom-color:var(--rust)} .nt .small{display:block;font-size:.63rem;opacity:.65;font-weight:600;text-transform:none;letter-spacing:0}
+.section{display:none;animation:fade .22s ease}.section.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px 42px}
+.head{padding:32px 0 18px;text-align:center}.head .kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:#988c80;font-weight:800}.head h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.4rem);font-weight:900;margin-top:4px}.head p{max-width:700px;margin:8px auto 0;color:var(--muted)}
+.weather{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;background:linear-gradient(90deg,#e7f3ff,#fff6e6);padding:11px 16px;font-size:.82rem;font-weight:700}
+.drive{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;background:var(--night);color:#fff;padding:11px 16px;font-size:.82rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--glow)}
+.card h3{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.9rem}
+.badgeRow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.pill{padding:4px 9px;border-radius:999px;background:#f4ede6;font-size:.72rem;font-weight:800;color:#8a5a31}
+.band{background:#fff7ef;border:1px solid #f0dbc6;border-left:5px solid var(--rust);padding:16px 18px;border-radius:0 16px 16px 0;margin:18px 0}.band h4{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:4px}.band p{color:var(--muted);font-size:.9rem}
+.timeline{display:grid;gap:14px;margin-top:8px}.stop{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--glow)}
+.tm{display:inline-block;background:var(--rust);color:#fff;border-radius:999px;padding:4px 10px;font-size:.72rem;font-weight:800;letter-spacing:.03em;margin-bottom:8px}
+.stop h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:6px}.stop p{font-size:.92rem;color:var(--muted)}
+.options{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+.option{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}.option .tag{display:inline-block;font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:4px 8px;margin-bottom:7px;background:#eef4fb;color:var(--sky)}
+.option h4{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:4px}.option p{font-size:.86rem;color:var(--muted)}
+.option ul{margin:7px 0 0 18px;color:var(--muted);font-size:.84rem}
+.split{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.mini h4{font-size:.9rem;font-weight:800;margin-bottom:5px}.mini p,.mini li{font-size:.84rem;color:var(--muted)}
+.check{list-style:none;display:grid;gap:8px}.check li{padding-left:24px;position:relative}.check li:before{content:'✓';position:absolute;left:0;top:0;color:var(--sage);font-weight:900}
+.smallgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.footerNote{font-size:.8rem;color:#8b8178;text-align:center;padding:18px 0 8px}
+@media (max-width:740px){.split{grid-template-columns:1fr}.hero{padding-top:44px}.wrap{padding:0 13px 34px}.card,.stop,.option{border-radius:16px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>The Chitsaz Southwest Loop</h1>
+  <div class="sub">Ali, Kristen, Kamran (12) &amp; Ashton (8)</div>
+  <div class="badge">Saturday March 21 – Thursday March 26, 2026</div>
+  <div class="route">
+    <span>Temecula</span>
+    <span>MGM Grand · 2 nights</span>
+    <span>Desert Pearl Inn · 2 nights</span>
+    <span>Bryce Canyon Lodge · 1 night</span>
+    <span>Valley of Fire</span>
+    <span>Home</span>
+  </div>
+</div>
+
+<div class="nav" id="navBar">
+  <div class="nt active" data-target="overview">Overview</div>
+  <div class="nt" data-target="vegas1"><span class="small">Sat 3/21</span>Vegas Day 1</div>
+  <div class="nt" data-target="vegas2"><span class="small">Sun 3/22</span>Vegas Day 2</div>
+  <div class="nt" data-target="zion1"><span class="small">Mon 3/23</span>To Zion</div>
+  <div class="nt" data-target="zion2"><span class="small">Tue 3/24</span>Zion Big Day</div>
+  <div class="nt" data-target="bryce"><span class="small">Wed 3/25</span>Bryce Day</div>
+  <div class="nt" data-target="home"><span class="small">Thu 3/26</span>Valley of Fire</div>
+  <div class="nt" data-target="extras">Extras</div>
+</div>
+
+<section class="section active" id="overview">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker">Trip at a Glance</div>
+      <h2>Big scenery, smart pacing, and lots of options</h2>
+      <p>This guide is built for phone use on the road. Each day has a clean main plan plus easy options for food, hidden gems, and backup moves.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card"><h3>Saturday · Vegas launch</h3><p>11 AM early check-in, one fun Vegas activity, an atmosphere-first dinner, and an optional show if a great deal pops up.</p><div class="badgeRow"><span class="pill">Room ready at 11</span><span class="pill">Flexible night</span></div></div>
+      <div class="card"><h3>Sunday · MGM basecamp day</h3><p>Daybed + lazy river all day, then a smart late-afternoon split plan with F1 and a family show at night.</p><div class="badgeRow"><span class="pill">Pool anchor</span><span class="pill">F1 + show</span></div></div>
+      <div class="card"><h3>Monday–Tuesday · Zion</h3><p>Riverside Walk, Emerald Pools, canyon sunset, good food, and no Narrows logistics.</p><div class="badgeRow"><span class="pill">Early starts</span><span class="pill">Shuttle days</span></div></div>
+      <div class="card"><h3>Wednesday · Bryce</h3><p>Canyon Overlook on the drive, Bryce hoodoos, lodge stay, sunset and sunrise.</p><div class="badgeRow"><span class="pill">Cold evening</span><span class="pill">Big payoff</span></div></div>
+      <div class="card"><h3>Thursday · Valley of Fire</h3><p>One final red-rock hit with flexible stop options, then home.</p><div class="badgeRow"><span class="pill">Best light earlier</span><span class="pill">Tesla-aware</span></div></div>
+      <div class="card"><h3>Tesla rhythm</h3><p>Vegas top-up, Springdale high-charge departure, Cedar City as the clean Bryce safety valve, Henderson for the final long leg.</p><div class="badgeRow"><span class="pill">Simple plan</span><span class="pill">No stress</span></div></div>
+    </div>
+
+    <div class="band">
+      <h4>Vegas game plan</h4>
+      <p>Saturday is the flex night. Sunday is the committed Vegas day: use the MGM daybed as home base, keep the boys in and out of the lazy river, then stack one memorable late-afternoon experience with one memorable night show.</p>
+    </div>
+
+    <div class="split">
+      <div class="card mini">
+        <h4>Weather feel</h4>
+        <ul class="check">
+          <li>Vegas: hot pool weather — save most outdoor walking for after sunset.</li>
+          <li>Zion: warm enough for short sleeves, still worth an early shuttle start.</li>
+          <li>Bryce: cold mornings and evenings — layers matter.</li>
+          <li>Valley of Fire: comfortable if you hit it before mid-day heat builds.</li>
+        </ul>
+      </div>
+      <div class="card mini">
+        <h4>Money saver note</h4>
+        <p>For this exact route, paying individual entrance fees at Zion and Bryce is slightly cheaper than buying the America the Beautiful pass.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="vegas1">
+  <div class="weather"><span>Vegas high around 100°F</span><span>11 AM room ready</span><span>Keep outdoor walking for nighttime</span></div>
+  <div class="drive"><span>Temecula → MGM Grand</span><span>~230 miles</span><span>~3.5–4 hours</span><span>Early check-in confirmed</span></div>
+  <div class="wrap">
+    <div class="head"><div class="kicker">Saturday, March 21</div><h2>Arrive early, pick one fun move, then go big on dinner</h2><p>The smartest version of Saturday is simple: get settled fast, do one memorable activity, then save the best energy for dinner and nighttime Vegas.</p></div>
+
+    <div class="timeline">
+      <div class="stop"><div class="tm">11:00 AM</div><h3>Check in and reset</h3><p>Room is ready, so unpack, change, and decide what kind of day this will be. No pressure to rush straight to the pool.</p></div>
+      <div class="stop"><div class="tm">Lunch Window</div><h3>Eat somewhere easy, then choose the afternoon lane</h3><p>Keep lunch casual and fast. Save the real dining swing for dinner.</p>
+        <div class="options">
+          <div class="option"><span class="tag">Closest easy win</span><h4>Shake Shack at New York-New York</h4><p>Fast, reliable, and a very easy first-stop lunch after the drive.</p></div>
+          <div class="option"><span class="tag">Best if everyone wants to stay put</span><h4>MGM casual reset</h4><p>Grab something simple on property, get upstairs, and make the afternoon decision from the room.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Afternoon</div><h3>Pick one main activity</h3><p>One great activity is better than trying to do three half-versions. These are the best fits.</p>
+        <div class="options">
+          <div class="option"><span class="tag">Best overall value</span><h4>Topgolf</h4><p>Closest major hit from MGM, easy for all four of you, and one of the best family fun-per-dollar plays in Vegas.</p><ul><li>Best if everyone wants to do the same thing</li><li>Strong Saturday anchor if you want Sunday fully pool-first</li></ul></div>
+          <div class="option"><span class="tag">Best variety</span><h4>Atomic Golf</h4><p>More modern and more mixed-use than Topgolf, with mini-games and a looser family entertainment feel.</p><ul><li>Great if Ashton wants more than just hitting balls</li><li>Better as an experience mix than a pure golf stop</li></ul></div>
+          <div class="option"><span class="tag">Best weird Vegas</span><h4>Omega Mart / AREA15</h4><p>Strange, immersive, and very memorable. Strong choice if you want Saturday to feel unique instead of sporty.</p></div>
+          <div class="option"><span class="tag">Best easy reset</span><h4>MGM pool for a short block</h4><p>If the drive takes more out of everyone than expected, do a lighter afternoon and let Sunday stay the big pool day.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Dinner</div><h3>Atmosphere-first Vegas dinner options</h3><p>Tonight should feel like the trip has officially started. Choose based on mood, not logistics.</p>
+        <div class="options">
+          <div class="option"><span class="tag">Best overall vibe</span><h4>Superfrico</h4><p>Psychedelic Italian inside the Cosmopolitan with roaming performers and full-on Vegas energy.</p><ul><li>Best first-night memory maker</li><li>Strongest room atmosphere of the group</li></ul></div>
+          <div class="option"><span class="tag">Best polished buzz</span><h4>Din Tai Fung at ARIA</h4><p>Beautiful room, buzzy crowd, and food everyone will actually want to eat.</p></div>
+          <div class="option"><span class="tag">Best playful family choice</span><h4>Black Tap</h4><p>Great burger-and-shake energy if you want the night to feel fun more than fancy.</p></div>
+          <div class="option"><span class="tag">Best if a deal appears</span><h4>Add a Saturday show</h4><p>If you find a strong same-day deal, this is the night to do it without cutting into Sunday pool time.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Best Saturday Show Options</div><h3>If you decide to add one</h3><p>Only do this if the family still has good energy after dinner.</p>
+        <div class="options">
+          <div class="option"><span class="tag">Best all-around family pick</span><h4>Mystère</h4><p>Classic Cirque, upbeat, colorful, and easier for kids to enjoy than the more serious shows.</p></div>
+          <div class="option"><span class="tag">Best easy from MGM</span><h4>KÀ</h4><p>Huge stage spectacle right in your hotel. Best when convenience matters most.</p></div>
+          <div class="option"><span class="tag">Best lower-cost fun</span><h4>Blue Man Group</h4><p>Shorter, louder, playful, and often one of the better value family tickets in town.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">After Dinner</div><h3>Night walk</h3><p>Bellagio fountains, Bellagio Conservatory, and easy Strip wandering. This is the best time of day for Vegas walking in this weather.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="vegas2">
+  <div class="weather"><span>Vegas high around 93°F</span><span>Daybed + lazy river day</span><span>Best big night to pair with F1</span></div>
+  <div class="wrap">
+    <div class="head"><div class="kicker">Sunday, March 22</div><h2>MGM daybed all day, then F1 and a family show</h2><p>This is the most efficient Vegas day of the trip: use the daybed as your basecamp, let the boys drift in and out of the pool, then finish with one split-plan activity and one family show.</p></div>
+
+    <div class="band"><h4>Sunday anchor</h4><p>Do not over-plan the first half of the day. The daybed is the reason Sunday works so well. Stay in the lazy-river rhythm for as long as it feels good, then transition into the evening plan.</p></div>
+
+    <div class="timeline">
+      <div class="stop"><div class="tm">Morning → Afternoon</div><h3>Pool, daybed, lazy river, repeat</h3><p>Use MGM as home base. Snacks, shade, dry-off breaks, and short room resets all become easy when the daybed is the center of the day.</p></div>
+      <div class="stop"><div class="tm">Late Afternoon</div><h3>Best split plan</h3><p>This is the cleanest move for your family.</p>
+        <div class="options">
+          <div class="option"><span class="tag">Main recommendation</span><h4>Dad + Kam: F1 Grand Prix Plaza</h4><p>Best for Kam’s must-do. The exhibition and simulators make it worthwhile even before karting.</p><ul><li>Ideal window: roughly 4:00–6:15 PM</li><li>Leaves enough time for an 8:00 or 8:30 show</li></ul></div>
+          <div class="option"><span class="tag">Best parallel plan</span><h4>Mom + Ashton: easy fun nearby</h4><p>Keep Ashton on a lower-friction plan instead of forcing the whole F1 experience.</p><ul><li>Shark Reef at Mandalay Bay</li><li>Pinball Hall of Fame</li><li>Stay back and enjoy more pool time</li></ul></div>
+          <div class="option"><span class="tag">If everyone wants to stay together</span><h4>F1 X only</h4><p>All four can do the exhibit/simulator side, then skip any racing if it feels too old or too long for Ashton.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Best Sunday Show Pairing</div><h3>Family meet-up show after F1</h3><p>These are the strongest Sunday night options.</p>
+        <div class="options">
+          <div class="option"><span class="tag">Top recommendation</span><h4>Mystère · 8:30 PM</h4><p>The best blend of value, family fit, and payoff. Colorful, athletic, funny, and easier for kids than the more serious Cirque shows.</p><ul><li>Strongest all-around family pick</li><li>Great nightcap after pool + F1</li></ul></div>
+          <div class="option"><span class="tag">Best lower-cost backup</span><h4>Blue Man Group · 8:00 PM</h4><p>Playful, loud, and often a better pure-deal ticket than Cirque. Great if you want a lighter show.</p></div>
+          <div class="option"><span class="tag">Best if convenience wins</span><h4>KÀ at MGM</h4><p>Still a major spectacle and the easiest logistics since you are already sleeping there.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Dinner Shape</div><h3>How to handle food tonight</h3><p>Because the pool day is the priority, keep dinner simple and tactical.</p>
+        <div class="options">
+          <div class="option"><span class="tag">Best for a smooth show night</span><h4>Early casual dinner</h4><p>Eat something easy before F1 or between F1 and the show so no one is starving in their seats.</p></div>
+          <div class="option"><span class="tag">Best if the pool runs late</span><h4>Show first, dessert after</h4><p>Do the daybed all the way through the afternoon, grab a quick bite, then make late-night dessert the fun finish.</p></div>
+          <div class="option"><span class="tag">Best on-property fallback</span><h4>Keep it close to MGM</h4><p>The smartest Sunday move may be minimizing travel and saving the full atmosphere dinner for Saturday.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Before Bed</div><h3>Pack up for Zion</h3><p>Grocery stop, waters, fruit, trail snacks, and a clean Tesla charge so Monday starts easy.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="zion1">
+  <div class="weather"><span>Zion high around 84°F</span><span>Warm hiking afternoon</span><span>Mountain Time starts</span></div>
+  <div class="drive"><span>MGM Grand → Desert Pearl Inn</span><span>~160 miles</span><span>~2.5 hours plus time change</span><span>Charge high before leaving</span></div>
+  <div class="wrap">
+    <div class="head"><div class="kicker">Monday, March 23</div><h2>Vegas to Zion, lunch in Springdale, first canyon views</h2><p>Keep this day simple: arrive, eat, take one good hike, and make sunset easy.</p></div>
+
+    <div class="timeline">
+      <div class="stop"><div class="tm">Morning</div><h3>Drive to Springdale</h3><p>Leave with the car charged high. Mesquite or St. George are the easiest clean charger options if you want a comfortable buffer.</p></div>
+      <div class="stop"><div class="tm">Lunch</div><h3>Eat before hiking</h3>
+        <div class="options">
+          <div class="option"><span class="tag">Best first Zion meal</span><h4>Oscar's Cafe</h4><p>Big portions, easy family energy, and the classic Springdale landing spot.</p></div>
+          <div class="option"><span class="tag">Best quick option</span><h4>Deep Creek Coffee</h4><p>Faster, lighter, and easy if everyone wants to get moving.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Afternoon</div><h3>Choose one opening hike</h3>
+        <div class="options">
+          <div class="option"><span class="tag">Best active choice</span><h4>Watchman Trail</h4><p>More satisfying if everyone wants a real hike and a viewpoint payoff.</p></div>
+          <div class="option"><span class="tag">Best relaxed choice</span><h4>Pa'rus Trail</h4><p>Flat, scenic, and a smart move if the drive takes more out of everyone than expected.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Sunset</div><h3>Canyon Junction</h3><p>This is the hidden-gem feeling stop that is easy enough to actually do. Strong payoff, little effort, and a great Zion memory.</p></div>
+      <div class="stop"><div class="tm">Dinner</div><h3>Springdale night options</h3>
+        <div class="options">
+          <div class="option"><span class="tag">Best casual win</span><h4>Zion Pizza &amp; Noodle Co.</h4><p>Exactly what everyone wants after a hiking afternoon.</p></div>
+          <div class="option"><span class="tag">Best easy backup</span><h4>Camp Outpost</h4><p>If everyone is cooked, staying close to the room is the smart move.</p></div>
+          <div class="option"><span class="tag">Best vibe</span><h4>Bit &amp; Spur</h4><p>Lively patio, Southwestern energy, and a real vacation feel.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="zion2">
+  <div class="weather"><span>Zion high around 82°F</span><span>Start early</span><span>Shuttle day</span></div>
+  <div class="wrap">
+    <div class="head"><div class="kicker">Tuesday, March 24</div><h2>Riverside Walk, Emerald Pools, and a very clean Zion day</h2><p>No Narrows gear. No extra complexity. Just the strongest family version of Zion.</p></div>
+    <div class="timeline">
+      <div class="stop"><div class="tm">Early</div><h3>First-shuttle mindset</h3><p>Get moving early so the canyon feels spacious. Desert Pearl makes this easy.</p></div>
+      <div class="stop"><div class="tm">Morning</div><h3>Riverside Walk out-and-back</h3><p>Flat, dramatic, and one of the best effort-to-payoff walks in any national park. Reach the Narrows entrance, enjoy the canyon closing in, then turn around.</p></div>
+      <div class="stop"><div class="tm">Midday</div><h3>Zion Lodge lunch</h3><p>Refuel, refill bottles, reset for the second half of the day.</p></div>
+      <div class="stop"><div class="tm">Afternoon</div><h3>Emerald Pools</h3><p>Lower Emerald Pool is the easy default. If everyone still has gas, keep going higher. Let the family mood decide, not the itinerary.</p></div>
+      <div class="stop"><div class="tm">Late Afternoon</div><h3>Hotel reset</h3><p>Pool, hot tub, balcony, snacks, and some real downtime. This break is worth protecting.</p></div>
+      <div class="stop"><div class="tm">Dinner + Dessert</div><h3>Final Springdale night</h3>
+        <div class="options">
+          <div class="option"><span class="tag">Best nice dinner</span><h4>Spotted Dog Cafe</h4><p>The polished dinner choice for Zion.</p></div>
+          <div class="option"><span class="tag">Best slightly different</span><h4>Wild Thyme</h4><p>Great if you want a more memorable menu than standard vacation fare.</p></div>
+          <div class="option"><span class="tag">Dessert stop</span><h4>Bumbleberry Bakery</h4><p>Classic post-dinner move and a fun way to end Zion.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bryce">
+  <div class="weather"><span>Bryce high around 52°F</span><span>Morning can be in the 20s</span><span>Sunrise worth it</span></div>
+  <div class="drive"><span>Desert Pearl → Bryce Canyon Lodge</span><span>Use east side of Zion</span><span>Cedar City is the clean charge backup</span></div>
+  <div class="wrap">
+    <div class="head"><div class="kicker">Wednesday, March 25</div><h2>Canyon Overlook, Bryce hoodoos, lodge night, sunset and sunrise</h2><p>This is the biggest scenery day of the trip.</p></div>
+
+    <div class="timeline">
+      <div class="stop"><div class="tm">Morning</div><h3>Drive east through Zion</h3><p>Do Canyon Overlook here, exactly on route, then keep moving. Quick stop at Checkerboard Mesa if it sounds fun.</p></div>
+      <div class="stop"><div class="tm">Late Morning</div><h3>Arrive Bryce, drop bags, get first look</h3><p>The first moment at the rim is part of the experience. Let that land before rushing into anything else.</p></div>
+      <div class="stop"><div class="tm">Afternoon</div><h3>Main hike: Queen's Garden + Navajo combination</h3><p>Check current trail conditions at the visitor center first. If part of Navajo is closed, just adjust to the open route and keep the overall plan the same.</p></div>
+      <div class="stop"><div class="tm">Later Afternoon</div><h3>Scenic drive pull-offs</h3><p>Inspiration Point, Natural Bridge, and Rainbow Point are the best value stops if everyone still wants more.</p></div>
+      <div class="stop"><div class="tm">Dinner</div><h3>Choose convenience or better food</h3>
+        <div class="options">
+          <div class="option"><span class="tag">Most convenient</span><h4>Bryce Canyon Lodge Dining Room</h4><p>Easy, classic, and ideal when you do not want another drive.</p></div>
+          <div class="option"><span class="tag">Best upgrade</span><h4>Stone Hearth Grille</h4><p>Worth the drive if everyone wants one stronger Bryce-area meal.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Sunset</div><h3>Bryce Point</h3><p>Bring warm layers. This is one of the best sunset moments on the trip.</p></div>
+      <div class="stop"><div class="tm">Next Morning</div><h3>Sunrise at Sunrise Point</h3><p>Do it. Five minutes from the lodge, huge payoff, and one of the trip's signature moments.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="home">
+  <div class="weather"><span>Cold Bryce start</span><span>Valley of Fire warm by midday</span><span>Earlier arrival is better</span></div>
+  <div class="drive"><span>Bryce → Valley of Fire → Temecula</span><span>Best if leaving Bryce early</span><span>Henderson is the clean final-charge stop</span></div>
+  <div class="wrap">
+    <div class="head"><div class="kicker">Thursday, March 26</div><h2>Sunrise, Valley of Fire, and home</h2><p>Earlier is better today. The park is most enjoyable before the light gets harsh and the heat rises.</p></div>
+    <div class="timeline">
+      <div class="stop"><div class="tm">Early</div><h3>Sunrise, breakfast, departure</h3><p>Try to leave Bryce as early as the family can tolerate. This helps both Valley of Fire comfort and the home arrival time.</p></div>
+      <div class="stop"><div class="tm">Mid-Morning</div><h3>Valley of Fire main plan</h3><p>Fire Wave is the headline. After that, choose one more stop based on battery, legs, and mood.</p>
+        <div class="options">
+          <div class="option"><span class="tag">Best add-on</span><h4>White Domes</h4><p>Short loop with colorful rock, a slot section, and more adventure feel.</p></div>
+          <div class="option"><span class="tag">Best petroglyph stop</span><h4>Mouse's Tank</h4><p>Easy walk, strong payoff, and a very good fit for the boys.</p></div>
+          <div class="option"><span class="tag">Best ultra-quick stop</span><h4>Atlatl Rock</h4><p>Fast petroglyph win without a bigger time commitment.</p></div>
+        </div>
+      </div>
+      <div class="stop"><div class="tm">Lunch</div><h3>Quick win on the way out</h3><p>Henderson or south Vegas is the easy late lunch zone. In-N-Out is the clean family-finale move if everyone wants something simple and familiar.</p></div>
+      <div class="stop"><div class="tm">Afternoon</div><h3>Final drive home</h3><p>Charge in Henderson if needed, then settle in for the long California leg. Barstow is the natural stretch point only if the car or family needs it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="extras">
+  <div class="wrap">
+    <div class="head"><div class="kicker">Reference Section</div><h2>Hidden gems, food worth missing nothing for, and Tesla notes</h2><p>Quick-scan extras for when plans shift.</p></div>
+
+    <div class="smallgrid">
+      <div class="card mini"><h4>Best hidden gems that truly fit this trip</h4><ul class="check"><li>Canyon Junction at sunset</li><li>Checkerboard Mesa on the Bryce transfer day</li><li>Mossy Cave if Bryce timing opens up</li><li>Mouse's Tank for easy petroglyph payoff</li><li>White Domes for the best bonus loop at Valley of Fire</li></ul></div>
+      <div class="card mini"><h4>Vegas meals not to miss</h4><ul class="check"><li>Superfrico for atmosphere</li><li>Din Tai Fung for buzzy crowd-pleaser energy</li><li>Black Tap for canal views and shake chaos</li><li>Mayfair for a polished showpiece dinner</li></ul></div>
+      <div class="card mini"><h4>Springdale meals not to miss</h4><ul class="check"><li>Oscar's for the first landing meal</li><li>Zion Pizza &amp; Noodle after hiking</li><li>Spotted Dog for the nicer dinner</li><li>Bumbleberry for dessert</li></ul></div>
+      <div class="card mini"><h4>Tesla cheat sheet</h4><ul class="check"><li>Vegas: top up before Monday departure</li><li>Vegas → Zion: Mesquite or St. George if you want buffer</li><li>Zion/Bryce leg: leave Springdale strong</li><li>Cedar City: easiest Bryce-area safety valve</li><li>Henderson: clean charge before final home leg</li></ul></div>
+    </div>
+
+    <div class="band"><h4>Simple packing emphasis</h4><p>Shorts and pool gear for Vegas, hiking clothes and lots of water for Zion, and real warm layers for Bryce sunrise and sunset. Keep jackets and long pants easy to reach, not buried.</p></div>
+
+    <div class="footerNote">Chitsaz Family Southwest Loop · built for easy reference, easy sharing, and flexible decisions on the road</div>
+  </div>
+</section>
+
+<script>
+const tabs = document.querySelectorAll('.nt');
+const sections = document.querySelectorAll('.section');
+function showSection(id){
+  tabs.forEach(t=>t.classList.remove('active'));
+  sections.forEach(s=>s.classList.remove('active'));
+  const tab = document.querySelector(`.nt[data-target="${id}"]`);
+  const sec = document.getElementById(id);
+  if(tab) tab.classList.add('active');
+  if(sec) sec.classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+tabs.forEach(tab=>tab.addEventListener('click', ()=>showSection(tab.dataset.target)));
+</script>
+</body>
+</html>
